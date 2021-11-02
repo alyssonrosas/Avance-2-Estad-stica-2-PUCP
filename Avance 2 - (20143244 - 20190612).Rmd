@@ -1,0 +1,339 @@
+---
+title: "Avance 2"
+author: "Josemiguel"
+date: "31/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+FACULTAD DE CIENCIAS SOCIALES - PUCP
+
+Curso: Estadística para el análisis político 2 (POL304)
+
+Semestre 2021-1
+
+Docente: Marylia Cruz
+
+Alumnos: Alysson Rosas (20143244) y Josemiguel Vásquez (20190612)
+
+
+#AVANCE 2
+
+Tema: Los factores determinantes de la preferencia por la democracia en el Perú en el 2018
+
+#1. Presentación del problema público e importancia del tema planteado: 
+
+En el Perú, desde finales del 2017, se ha reforzado un alejamiento entre representantes y representados: fuerte desconfianza hacia la clase política, incredulidad hacia los partidos y las tradicionales vías de participación, así como escasa confianza en los gobiernos. Este clima de inestabilidad política, incluidos los conflictos sociales y amenazas de distintos grupos con poderes económicos y políticos, arriesga el correcto funcionamiento del sistema democrático. 
+La presente propuesta de investigación reconoce las amenazas contra el sistema democrático a propósito de la crisis política desenvuelta desde inicios del 2018 en el Perú como problema público, para la formulación del tema “Los factores determinantes de la preferencia por la democracia en el Perú en el 2018”. Dicho tópico resulta importante para el campo de la Ciencia Política, pues no solo permite reunir los motivos que inclinan a la población hacia un sistema democrático, sino también -y ya conociéndolos- posibilita que quienes deseen ser candidatos en futuras elecciones consideren estos factores y los traduzcan en alternativas viables de gobierno que aseguren el correcto funcionamiento del Estado de Derecho dentro del régimen democrático. 
+
+#2. Revisión de literatura previa sobre tema de interés (políticas públicas, marco regulatorio o acción del Estado anteriores):
+
+El Estado peruano, en el año 2018, mantuvo dentro de su agenda el fortalecimiento de la democracia y de factores asociados al detrimento de esta, tales como la corrupción, el debilitamiento institucional, la brecha económica, etc.
+En cuanto a la política interna, se emitió un decreto supremo en el que se aprobó la Política General de Gobierno hacia el año 2021. En aquel decreto, había alrededor de cinco ejes. Integridad y lucha anticorrupción; fortalecimiento institucional para la gobernabilidad;  Crecimiento económico equitativo, competitivo y sostenible;  Desarrollo social y bienestar de la población; y, descentralización efectiva para el desarrollo. Aquellos cinco elementos representaron el compromiso del nuevo gobierno de Martin Vizcarra, luego de la vacancia de Pedro Pablo Kuczynski, a reconstruir la situación problemática en la que se encontraba la democracia peruana.
+En cuanto a política exterior, en 2018 se llevó a cabo una cumbre de la OEA en Perú, un mes después de la vacancia de Pedro Pablo Kuczynski, en donde se creó el mandato “Compromiso de Lima”, en el cual había una serie de compromiso a implementar en favor de la democracia en América Latina. Que el Perú fuera sede de aquella cumbre, y el compromiso llevará el nombre de la capital peruana, representaba un deber mayor al Estado peruano a ejecutar estas reglas. En el documento se encuentran temas como la inclusión de grupos vulnerables en busca de fortalecer la gobernanza, lucha anticorrupción, fortalecimiento de la separación de poderes, las instituciones democráticas, y de las oficinas de control superior, entre otras. 
+
+#3. Pregunta de investigación:
+
+¿Qué factores influyeron en la preferencia por la democracia en el Perú en el 2018?
+
+#4. Objetivo general y específicos del reporte:
+
+El objetivo general de la investigación consiste en identificar y analizar los factores influyentes en la preferencia por la democracia en el Perú en el 2018. 
+-Objetivos específicos (Conociendo ya la variable dependiente):
+-Seleccionar un posible conjunto de variables explicativas tras la revisión detallada del Cuestionario LB 2018 A que ayude a responder la pregunta de investigación.
+-Elaborar un subset que permita reunir las variables seleccionadas para la consecución del objetivo general de la investigación en una nueva base de datos desprendida de la original.
+-Reconocer la estructura de la variable que se desea predecir y de las que ayudarán a predecirla para verificar que la indicada por el programa estadístico R Studio corresponde al tipo de variable o, de lo contrario, realizar el cambio, agregando las necesarias recodificaciones.
+-Elaborar un análisis descriptivo considerando las medidas de tendencia central y de dispersión de las variables a utilizar para responder a la cuestión planteada.
+-Describir la posible prueba estadística a emplear y hallar la mejor combinación de variables independientes para determinar alguna de las hipótesis formuladas.
+
+#5. Reunión de factores asociados al problema público. Mención de la variable dependiente y de las independientes seleccionadas a partir del análisis del cuestionario vinculado al propósito de la investigación:
+
+-Variable Dependiente (la que se desea predecir):
+P12STGBS: “Apoyo a la democracia” (inclinación de las personas hacia un gobierno democrático, autoritario o indiferencia hacia el tipo de régimen político)
+-Variables Independientes (las que ayudarán a predecir):
+P13STGBS.B: “Satisfacción con el funcionamiento de la economía en (país)”
+P14ST: “País gobernado por unos cuantos grupos poderosos en su propio beneficio o para el bien de todo el pueblo” (percepción respecto a las intenciones de quienes los gobiernan)
+P15STGBSC (8 categorías): Confianza en fuerzas de seguridad o instituciones democráticas
+P18GBS = “¿Cómo diría Ud. que es la democracia en su país?” 
+P20STGBSC: “Aprobación de la gestión del gobierno que encabeza el presidente”
+
+#6. Formulación de respuestas tentativas o posibles hipótesis de la investigación:
+
+-Hipótesis general:
+
+-El conocimiento sobre la satisfacción con el funcionamiento de la economía, la percepción respecto a las intenciones de quienes gobiernan a los habitantes, la confianza en las fuerzas de seguridad o instituciones democráticas, el juicio y evaluación personal de cada encuestado sobre la democracia en su país y el nivel de aprobación de la gestión del gobierno que encabeza el presidente constituyen los factores fundamentales en la explicación de la preferencia por la democracia en el Perú en el 2018.
+
+-Hipótesis alternativas:
+
+-El conocimiento sobre la satisfacción con el funcionamiento de la economía, la confianza en las fuerzas de seguridad o instituciones democráticas, el juicio y evaluación personal de cada encuestado sobre la democracia en su país y el nivel de aprobación de la gestión del gobierno que encabeza el presidente representan los factores claves en la explicación de la preferencia por la democracia en el Perú en el 2018.
+-El conocimiento sobre la satisfacción con el funcionamiento de la economía, la confianza en las fuerzas de seguridad o instituciones democráticas, y el juicio y evaluación personal de cada encuestado sobre la democracia en su país constituyen los factores esenciales en la explicación de la variable dependiente.
+
+#7. Análisis descriptivo de las variables empleadas (dependiente e independientes): 
+
+```{r}
+library(rio)
+data=import("Latinobarometro_2018_Esp_Spss_v20190303.sav")
+head(data)
+```
+
+```{r}
+str(data$IDENPA)
+```
+
+#Se crea un subset con únicamente los datos de Perú, debido a que la investigacion ira en torno a la crisis política del Perú en 2018.
+```{r}
+peru=subset(data,IDENPA==604)
+table(peru$IDENPA)
+```
+Se recodifica el término "604" que corresponde al país "Perú"
+```{r}
+library(car)
+peru$pais<- recode(peru$IDENPA, "604='Peru'")
+table(peru$pais)
+```
+
+#En el subset "Peru" se seleccionan solo las variables dependiente e independientes a trabajar en la investigacion, reduciendo así la base de datos.
+```{r}
+library(dplyr)
+peru=select(peru, IDENPA, P12STGBS, P13STGBS.B, P14ST, P15STGBSC.A, P15STGBSC.B, P15STGBSC.D, P15STGBSC.E, P15STGBSC.F, P15STGBSC.G, P15STGBSC.H, P18GBS, P20STGBSC)
+```
+
+
+#Variable dependiente: Apoyo a un tipo de régimen.
+```{r}
+str(peru$P12STGBS)
+table(peru$P12STGBS)
+```
+La variable "Apoyo a un tipo de regimen" (P12STGBS), se encuentra como numérica y se divide en 3 opciones, que corresponden a un regimen democratico (1) o autoritario (2); además hay una opción de indiferencia (3) ante el tipo de régimen a preferir. Los encuestados que son indiferentes son un gran conjunto de personas; por esa razon, no se puede prescindir de esta información en el estudio.
+
+
+Se recodifica el orden de las subvariables de manera que los "indiferentes al tipo de regimen" (3) se encuentren en el espectro neutro (2), y el orden de las variables colabore con el modelo de regresion a utilizar. Luego, se convierte la variable a categórica y se renombran las subvariables.
+```{r}
+peru$P12STGBS = car::recode(peru$P12STGBS,"1=1;2=3;3=2")
+peru$P12STGBS = as.factor(peru$P12STGBS)
+levels(peru$P12STGBS)=c("Democratico","Indiferente","Autoritario")
+table(peru$P12STGBS)
+```
+De esta manera, según la muestra, en Perú en 2018, la mayoría de encuestados (514) preferia un regimen democratico. Los preferentes a un regimen autoritario (216) representaban a una minoria incluso en tercer orden comparados con los indiferentes. Sin embargo, la muestra parece indicar que de presentarse un gobierno autoritario, el apoyo estaría por encima de los opositores, debido a que los preferentes de un gobierno autoritario junto con los indiferentes representan un número mayor (540) que el de preferentes a un gobierno democratico (514). 
+La gran cantidad de indiferentes tambien puede representar un creciente número de anti politica en el Perú. Esto podría deberse a las crisis y errores de la clase política peruana.
+
+
+#Variable independiente: nivel de satisfaccion con la economia
+```{r}
+str(peru$P13STGBS.B)
+table(peru$P13STGBS.B)
+```
+La variable "Nivel de satifaccion con la economia" (P13STGBS.B), se encuentra como numérica y se divide en 4 opciones, que corresponden a la satifaccion ya sea mucha (1), algo (2), poca(3), nada(4).
+
+
+Se recodifica el orden de las subvariables de manera que se comience en el orden con los que tuvieron una satisfaccion menor con la economia, y los de mayor satisfaccion tengan un numero superior. Luego, se convierte la variable a ordinal y se renombran las subvariables.
+
+```{r}
+peru$P13STGBS.B = car::recode(peru$P13STGBS.B,"1=4;2=3;3=2;4=1")
+peru$P13STGBS.B = as.ordered(peru$P13STGBS.B)
+levels(peru$P13STGBS.B)=c("Nada","Poco","Algo","Mucho")
+table(peru$P13STGBS.B)
+```
+La muestra indica que, dentro los encuestados, hay una enorme diferencia entre los "muy satisfechos" (34) o "algo satisfechos" (79) con la economia, y los "nada satisfechos" (432) o "poco satisfechos" (608). Debido a que el crecimiento economico del país ha venido siendo progresivo -a excepcion del año 2020- esto puede indicar que no todos los peruanos fueron satisfechos de igual manera por el crecimiento total, o que su nivel de ganancia con el sistema economico ha ido en disminucion. 
+
+
+#Variable independiente: intenciones de quien gobierna
+```{r}
+str(peru$P14ST)
+table(peru$P14ST)
+```
+La variable "Intenciones de quien gobierna" (P14ST), representa la percepcion de los encuestados en referencia a si en el manejo de la politica se da "por poderosos" (1), o si se "gobierna para el pueblo" (2). Esta variable se encuentra como numérica. 
+
+
+Se convierte la variable a factor y se renombran las subvariables a las dos percepciones que se le presentaron a elegir a los encuestados, que se mencionaron anteriormente.
+
+```{r}
+peru$P14ST = as.factor(peru$P14ST)
+levels(peru$P14ST)=c("Por poderosos","Para el pueblo")
+table(peru$P14ST)
+```
+Hay una gran diferencia en el parecer de los encuentados en cuanto a las intenciones del gobierno peruano. Los encuestados con la percepcion de que se gobierna "por los poderosos" (1015) son casi diez veces en número los que tienen la percepcion de que se gobierna "para el pueblo" (145).
+Esta proporcion es similar si se compara a los dos niveles más altos de "satisfaccion con la economia" con respecto a sus los dos niveles más bajos de esa misma variable. De esa manera los dos niveles más altos de la anterior variable representan juntos a 113 encuestados y los dos niveles más bajos a 1040, casi la misma proporcion de 1/10.
+Por lo tanto parece haber una relación entre la percepción de que se gobierna por los poderosos y la menor satisfaccion economica, siendo que si son menos satisfechos podrian sentir que la economia es manejada por esos poderosos con mas ganancias.
+
+
+#Variable independiente: percepcion democratica
+```{r}
+str(peru$P18GBS)
+table(peru$P18GBS)
+```
+
+La variable "Percepcion democratica" (P18GBS), representa la percepcion de los encuestados en referencia a qué tipo de democracia hay en el Perú, si es una democracia plena (1), débil (2), muy débil (3), o si es que no hay una democracia (4) o no sabe el tipo o si es que hay alguna democracia (5). Esta variable se encuentra como numérica. 
+
+
+Se convierte la variable a factor y no a ordinal debido a que la subvariable "no hay democracia" también podría ser interpretada como hay un regimen autoritario y por lo tanto, no entra como una tipologia democratica en la cual habría un orden, sino como un elemento a parte de este. Además, la subvariable "no sabe" tampoco representa un nivel dentro de lo que un encuestado podria concebir como democracia, y los encuestados que eligieron esta opcion son un numero relevante que no puede ser descaartado. 
+Se renombran las subvariables a las cinco opciones presentadas anteriormente.
+
+```{r}
+peru$P18GBS = as.factor(peru$P18GBS)
+levels(peru$P18GBS)=c("Democracia plena","Democracia débil", "Democracia muy débil", "No Democracia ", "No sabe")
+table(peru$P18GBS)
+```
+Según la muestra, habría una mayor percepcion de democracia muy debil, lo cual podría ser preciso debido al comienzo de una etapa de crisis politica en el Perú entre finales de 2017 e inicios de 2018. Además es importante ver que el número de encuestados que percibe que no hay democracia en el país es casi 4 veces el número de encuestados que percibe una democracia plena, lo cual denota un claro desgaste democrático entre polos "democracia-autoritarismo". 
+
+
+
+#Variable independiente: Aprobacion del gobierno
+```{r}
+str(peru$P20STGBSC)
+table(peru$P20STGBSC)
+```
+La variable "Aprobacion al gobierno" (P20STGBSC) se encuentra como numérica y hay dos opciones, la aprobacion (1), o desaprobacion (2) del gobierno de turno, el cual era el gobierno de Martin Vizcarra (Año 2018). 
+
+Se convierte la variable a factor y se renombran las subvariables a las dos percepciones que se le presentaron a elegir a los encuestados, que se mencionaron anteriormente.
+```{r}
+peru$P20STGBSC = as.factor(peru$P20STGBSC)
+levels(peru$P20STGBSC)=c("Aprueba","Desaprueba")
+table(peru$P20STGBSC)
+```
+Se puede apreciar que, en los encuestados, la desaprobacion es mucho mayor que la aprobacion al gobierno. Sin embargo, esta mayoria (714) no se veria representada en los que apoyan un gobierno autoritario (216) pues son muchos menos; ni los que perciben que se gobierna por poderosos (1015), pues son muchos más, al igual que los dos niveles más bajos de satisfaccion con la economia (1040). Se puede decir que la mayor desaprobacion tendría que ver con la incapacidad para resolver la crisis politica que se vivia en el pais y los crecientes escandalos de corrupcion.
+
+
+#Variable independiente: confianza en fuerzas de seguridad 
+```{r}
+table(peru$P15STGBSC.A)
+table(peru$P15STGBSC.B)
+```
+La variable "Confianza en fuerzas de seguridad" (conf_fuerzas), se creará a partir de un indice aditivo entre la confianza (mucha, algo, poco o nada) en las Fuerzas Armadas (P15STGBSC.A) y la PNP (P15STGBSC.B). Estas dos variables son numéricas y se dividen en los 4 niveles ya mencionados.
+
+
+
+Se recodifica el orden de las subvariables de manera que se comience en el orden con los que tuvieron una confianza menor en las fuerzas de seguridad, y los de mayor confianza tengan un numero superior. Esta variable será numérica
+
+```{r}
+peru$P15STGBSC.A = car::recode(peru$P15STGBSC.A,"1=4;2=3;3=2;4=1")
+peru$P15STGBSC.B = car::recode(peru$P15STGBSC.B,"1=4;2=3;3=2;4=1")
+```
+
+```{r}
+table(peru$P15STGBSC.A)
+table(peru$P15STGBSC.B)
+```
+
+```{r}
+peru$conf_fuerzas=peru$P15STGBSC.A+peru$P15STGBSC.B
+summary(peru$conf_fuerzas)
+```
+```{r}
+peru$conf_fuerzas=peru$conf_fuerzas-2.00
+```
+
+```{r}
+peru$conf_fuerzas=peru$conf_fuerzas/6.00
+```
+
+```{r}
+summary(peru$conf_fuerzas)
+```
+#se establece el índice desde 0 al 100
+```{r}
+peru$conf_fuerzas=peru$conf_fuerzas*100
+summary(peru$conf_fuerzas)
+```
+El promedio de la confianza en las fuerzas de seguridad en el Perú según la muestra es de 43.12%. Esto puede indicar que la confianza tiende a tener un nivel bajo, y que son más los encuestados que expresan no confiar "nada" o "poco" en las fuerzas de seguridad que los que confian "algo" o "mucho". Esto podría relacionarse a la corrupcion institucional en la PNP y las FF.AA, así como a los crimenes cometidos hace unas decadas en el conflicto armado interno.
+
+```{r}
+var(peru$conf_fuerzas, na.rm=T)
+```
+```{r}
+sqrt(6.296269)
+```
+La desviacion estandar de esta variable muestra una clara desagrupacion de los valores. Si bien los valores tienden a la media y a la tendencia de una baja confianza, como se interpreto por la media, la "baja confianza" no es exagerada. Por la desviacion se puede interpretar que la diferencia entre los cuatro niveles de confianza no es mucha, y que si bien hay un grupo mayor, no estan tan separados.
+
+
+
+#Variable independiente: confianza en instituciones democraticas
+La variable "Confianza en instituciones democraticas" (conf_demo), se creará a partir de un indice aditivo entre la confianza (mucha, algo, poco o nada) en el Congreso (P15STGBSC.D), el Gobierno (P15STGBSC.E), el Poder Judicial (P15STGBSC.F), los partidos politicos (P15STGBSC.G), y la ONPE (P15STGBSC.H). Estas cinco variables son numéricas y se dividen en los 4 niveles ya mencionados.
+
+
+Se recodifica el orden de las subvariables de manera que se comience en el orden con los que tuvieron una confianza menor en las fuerzas de seguridad, y los de mayor confianza tengan un numero superior. Esta variable será numérica
+```{r}
+table(peru$P15STGBSC.D)
+table(peru$P15STGBSC.E)
+table(peru$P15STGBSC.F)
+table(peru$P15STGBSC.G)
+table(peru$P15STGBSC.H)
+```
+
+```{r}
+peru$P15STGBSC.D = car::recode(peru$P15STGBSC.D,"1=4;2=3;3=2;4=1")
+peru$P15STGBSC.E = car::recode(peru$P15STGBSC.E,"1=4;2=3;3=2;4=1")
+peru$P15STGBSC.F = car::recode(peru$P15STGBSC.F,"1=4;2=3;3=2;4=1")
+peru$P15STGBSC.G = car::recode(peru$P15STGBSC.G,"1=4;2=3;3=2;4=1")
+peru$P15STGBSC.H = car::recode(peru$P15STGBSC.H,"1=4;2=3;3=2;4=1")
+```
+
+```{r}
+table(peru$P15STGBSC.D)
+table(peru$P15STGBSC.E)
+table(peru$P15STGBSC.F)
+table(peru$P15STGBSC.G)
+table(peru$P15STGBSC.H)
+```
+
+```{r}
+peru$conf_demo=peru$P15STGBSC.D+peru$P15STGBSC.E+peru$P15STGBSC.F+peru$P15STGBSC.G+peru$P15STGBSC.H
+summary(peru$conf_demo)
+```
+
+```{r}
+peru$conf_demo=peru$conf_demo-5.00
+```
+
+```{r}
+peru$conf_demo=peru$conf_demo/15.00
+```
+
+```{r}
+summary(peru$conf_demo)
+```
+#se establece el índice desde 0 al 10
+```{r}
+peru$conf_demo=peru$conf_demo*100
+summary(peru$conf_demo)
+```
+La muestra indica un promedio de 23.65% en la confianza a las instituciones democraticas. Se puede decir de esta proporcion que la confianza tiene niveles muy bajos, mucho más que la confianza en las fuerzas de seguridad. Esto podría deberse a la crisis politica en el país que enfrento al legislativo y ejecutivo, o la incapacidad del poder judicial para intermediar en la crisis mediante metodos constitucionales. Estos tres poderes se encuentran en el indice aditivo. Además, en 2018 hubo elecciones regionales y municipales, por lo que una baja confianza podria deberse a descontentos con resultados electorales. Por último, la baja confianza también podria representar un sentimiento anti politico y que, a pesar de los esfuerzos por una politica más formal en el sistema peruano, la tradicion de informalidad partidaria podría haber tenido que ver en este resultado.
+
+```{r}
+var(peru$conf_demo, na.rm=T)
+```
+```{r}
+sqrt(3.058903)
+```
+La desviacion estandar de esta variable no muestra una desagrupacion exagerada de los valores. Si bien tampoco son tan uniformes entre ellos, sí se puede hablar de una constancia en la baja confianza en las instituciones democraticas.
+
+
+#8. Descripción de la posible prueba estadística a utilizar para responder a la pregunta de investigación formulada:
+
+El presente trabajo de investigación propone diseñar un modelo mediante la aplicación de una regresión logística múltiple por ser la más conveniente al trabajarse con una variable dependiente categórica nominal de tipo politómica, donde se tienen más de dos opciones: democracia, indiferencia y autoritarismo, respecto de la que se quiere predecir la probabilidad de preferir la democracia o un sistema autoritario, priorizando la primera opción por estar vinculada a la pregunta de investigación. En miras a emplear las variables independientes indicadas para la formación del modelo que ayude a explicar a la variable dependiente, se sugiere que el conocimiento sobre la satisfacción con el funcionamiento de la economía, la percepción respecto a las intenciones de quienes gobiernan a los habitantes, la confianza en las fuerzas de seguridad o instituciones democráticas, el juicio y evaluación personal de cada encuestado sobre la democracia en su país y el nivel de aprobación de la gestión del gobierno que encabeza el presidente representan los regresores idóneos en la explicación de la preferencia por la democracia en el Perú en el 2018.
+
+
+#Link del repositorio publico del trabajo de investigacion:
+
+https://github.com/alyssonrosas/Avance-2-Estad-stica-2-PUCP 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
